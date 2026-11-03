@@ -44,4 +44,4 @@ Full version: [github.com/ShipItWorks](https://github.com/ShipItWorks) · Contac
 
 ---
 
-Drafted with Claude (Anthropic) from the product page on 2026-11-02 and reviewed by Robert Sweetman.
+Drafted with Claude (Anthropic) from the product page on 2026-11-02. Owner review by Robert Sweetman: pending.
