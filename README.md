@@ -2,7 +2,7 @@
 
 Unified RMM and PSA platform for managed service providers, one multi-tenant schema.
 
-**Score: 77 / 100** on the [ShipItWorks rubric](https://shipitworks.com/how-we-score/). Stage: Beta. As of 2026-11-02, from the [product page](https://shipitworks.com/helmline/).
+**Score: 78 / 100** on the [ShipItWorks rubric](https://shipitworks.com/how-we-score/). Stage: Beta. As of 2026-11-07, from the [product page](https://shipitworks.com/helmline/).
 
 Every number on the product page names the file it came from. The lists below are copied from that page, not rewritten.
 
@@ -17,18 +17,21 @@ Every number on the product page names the file it came from. The lists below ar
 - Hash-chained audit log, receipts, off-server anchors
 - Customer portal (emailed single-use link), outgoing mail
 - Email-to-ticket with quarantine
+- Attachments + optional ClamAV fail-closed
+- Web console in a browser
+- AI features (summarize+draft reply; draft fix script)
 
 ## Not done yet
 
-- Claude features and the Supabase Edge Function are in the repo but were never deployed or called live
-- The ClamAV fail-closed attachment path was never exercised (no daemon run)
-- macOS and Windows agents never run on real machines; Linux proven in CI only
+- macOS and Windows agents never run on real machines; the Linux agent is exercised in CI and with demo agents only
+- Browser suite needs a local stack and is not in CI
+- A breached SLA state is covered by unit tests only; the AI feature's monthly-cap refusal has not run against the real database
+- Not built: patching, software inventory, interactive remote shell, SSO and MFA, payment collection, business-hours SLA calendars (README Known limits)
 - Auth and data are Helmline's own Postgres, not Supabase Auth as PLAN section 7 assumes
-- Some of its pages still show an old contact email; they need to point to support@shipitworks.com
 
 ## Demo
 
-[Demo video (3:22) on the product page](https://shipitworks.com/helmline/) · [Transcript](https://shipitworks.com/helmline/transcript/)
+[Demo video (3:39) on the product page](https://shipitworks.com/helmline/) · [Transcript](https://shipitworks.com/helmline/transcript/)
 
 The demo voice is AI-generated (ElevenLabs, "Alice") and the demo shows made-up data. The video says so at the end.
 
