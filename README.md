@@ -2,7 +2,7 @@
 
 Unified RMM and PSA platform for managed service providers, one multi-tenant schema.
 
-**Score: 78 / 100** on the [ShipItWorks rubric](https://shipitworks.com/how-we-score/). Stage: Beta. As of 2026-11-07, from the [product page](https://shipitworks.com/helmline/).
+**Score: 78 / 100** on our own [rubric](https://shipitworks.com/how-we-score/). Stage: Beta. Scored 2026-11-03; this record was updated 2026-11-07 from the [product page](https://shipitworks.com/helmline/).
 
 Every number on the product page names the file it came from. The lists below are copied from that page, not rewritten.
 
@@ -17,14 +17,24 @@ Every number on the product page names the file it came from. The lists below ar
 - Hash-chained audit log, receipts, off-server anchors
 - Customer portal (emailed single-use link), outgoing mail
 - Email-to-ticket with quarantine
+- Attachments + optional ClamAV fail-closed
+- Web console in a browser
+- AI features (summarize+draft reply; draft fix script)
 
 ## Not done yet
 
-- Claude features and the Supabase Edge Function are in the repo but were never deployed or called live
-- The ClamAV fail-closed attachment path was never exercised (no daemon run)
-- macOS and Windows agents never run on real machines; Linux proven in CI only
+- macOS and Windows agents not run on real machines; the Linux agent is exercised in CI and with demo agents only
+- Browser suite needs a local stack and is not in CI
+- A breached SLA state is covered by unit tests only; the AI feature's monthly-cap refusal has not run against the real database
+- Not built: patching, software inventory, interactive remote shell, SSO and MFA, payment collection, business-hours SLA calendars (README Known limits)
 - Auth and data are Helmline's own Postgres, not Supabase Auth as PLAN section 7 assumes
-- Some of its pages still show an old contact email; they need to point to support@shipitworks.com
+
+## What changed
+
+- 2026-11-07: A CHANGELOG was added, and the private repo gained run logs for: the Linux agent's systemd sandbox score of 1.9 OK (a score computed from the generated unit text, not a run on a real host); scripts that are unsigned, signed with the wrong key, expired or tampered being refused (unit tests, not the installed service); and package archives being byte-identical across two builds (linux-x64 only; the other four targets were not built).
+- 2026-11-07: Virus scanning: a file that cannot be checked is refused and nothing is stored (tested against a fake scanner). A real ClamAV container detects the EICAR test file, and with the scanner stopped the same client refuses the file (local container, not the install path). Release v0.3.1.
+
+Full list with release tags: [CHANGELOG](CHANGELOG.md).
 
 ## Demo
 
@@ -34,7 +44,7 @@ The demo voice is AI-generated (ElevenLabs, "Alice") and the demo shows made-up 
 
 ## Source code
 
-The source is private for now. This repository holds the public record for the product: this README, and soon a CHANGELOG and LICENSE. Until the source is public, the [product page](https://shipitworks.com/helmline/) is the source of truth, and the score above is the one to trust.
+The source is private for now. This repository holds the public record for the product: this README and a CHANGELOG, and soon a LICENSE. Until the source is public, the [product page](https://shipitworks.com/helmline/) is the source of truth, and the score above is the one to trust.
 
 ## How we work
 
