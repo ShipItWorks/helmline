@@ -2,7 +2,7 @@
 
 Unified RMM and PSA platform for managed service providers, one multi-tenant schema.
 
-**Score: 77 / 100** on the [ShipItWorks rubric](https://shipitworks.com/how-we-score/). Stage: Beta. As of 2026-11-02, from the [product page](https://shipitworks.com/helmline/).
+**Score: 78 / 100** on the [ShipItWorks rubric](https://shipitworks.com/how-we-score/). Stage: Beta. As of 2026-11-07, from the [product page](https://shipitworks.com/helmline/).
 
 Every number on the product page names the file it came from. The lists below are copied from that page, not rewritten.
 
