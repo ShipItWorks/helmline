@@ -2,6 +2,13 @@
 
 Public record of changes to Helmline, written from the product page on shipitworks.com. The source is private. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Release tags exist on the private repository's default branch.
 
+## 2026-11-10 (release v0.4.0)
+
+- 2026-11-10: Site copy only: a dated correction now sits under the demo video for two narration lines (0:56 and 1:48), and the macOS and Windows agents line now reads 'not run on real machines as of 2026-11-10'. No code or score change.
+- 2026-11-10: Land PR #33 merged into main as 08c1a26 (merge of 20 lane PRs). An AI assist card on tickets, off by default (from #1; not counted as tested on the scorecard); a tenant isolation run log on real Postgres 16 with test data (#19); a signed script run as root in a systemd container, with no exit code line in the log (#15); a billed-once concurrency run log on real Postgres 16 (#23). Tagged v0.4.0 at 08c1a26.
+
+Score 65 / 100 on our own rubric, scored 2026-11-10. Product page: https://shipitworks.com/helmline/
+
 ## 2026-11-08 (release v0.3.3)
 
 - 2026-11-08: Tags v0.3.2 (836e078) and v0.3.3 (dd7cf78) cut; the only change after 836e078 is a FOUND.md notes update (PR 32). No new run log, PRIVACY.md or LICENSE on the default branch; CI install job still failing at v0.3.3. Score unchanged at 65/100 on our own rubric.
