@@ -2,6 +2,12 @@
 
 Public record of changes to Helmline, written from the product page on shipitworks.com. The source is private. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Release tags exist on the private repository's default branch.
 
+## 2026-11-18 (release v0.5.0)
+
+- 2026-11-18: a review at commit 7ef9bc1 corrected lines on this page: the test-suite figure, the agent's sandbox line, five comparison cells that said not built (they now give no proof level until the scorecard has rows for them), and the Windows installer clause, which had no saved log; no score, point or label changed.
+
+Score 65 / 100 on our own rubric, scored 2026-11-16. Product page: https://shipitworks.com/helmline/
+
 ## 2026-11-16 (release v0.5.0)
 
 - 2026-11-16: the scorecard moved to the latest main, tagged v0.5.0 (eleven merged pull requests, run 7 to run 10). No score, point or label changed; the CI, stage and not-built lines were brought up to date, and the macOS and Windows line now says the agent ran on one real machine each.
